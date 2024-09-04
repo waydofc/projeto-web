@@ -1,14 +1,15 @@
 # Cibersegurança e Seus Conceitos
 
-Este é um projeto web academico desenvolvido como parte de um trabalho de HTML.
+Este é um projeto web academico desenvolvido como parte de um trabalho.
 
 ## Índice
 
 ### Descrição: 
-Este é um projeto academico desenvolvido como parte de um trabalho de HTML. Sendo um site voltado ao tema cibersegurança, com objetivo informativo e distribuição de conhecimento, abordando seu conceito e sua importancia.
+Este é um projeto academico desenvolvido como parte de um trabalho da discipliina de Desenvolvimento Web. Sendo um site voltado ao tema cibersegurança, com objetivo de  prestação de serviços e distribuição de conhecimento.
 
 ### Tecnologias Utilizadas:
 **HTML5:**  Linguagem de marcação utilizada para criar a estrutura básica da página.
+**CSS:**
 
 ### Estrutura do Projeto:
 **index.html:** Página principal do projeto.
