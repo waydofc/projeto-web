@@ -14,6 +14,7 @@
                 <li><a href="#about-us">Sobre Nós</a></li>
                 <li><a href="#services">Serviços</a></li>
                 <li><a href="#aprendizagem">Aprendizagem</a></li>
+                <li><a href="#faq">Perguntas Frequentes</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
@@ -24,7 +25,7 @@
             <h1>Seja bem-vindo ao nosso site</h1>
             <p>Prestamos serviços profissionais e distribuímos aprendizados sobre conteúdos relacionados à cibersegurança.</p>
         </div>
-        <img src="img/logo1.png" alt="Logo da empresa Cibersec" class="logo">
+        <img src="css/img/logo1.png" alt="Logo da empresa Cibersec" class="logo">
     </section>
 
     <section id="about-us">
@@ -33,27 +34,24 @@
         
         <div class="container">
             <div class="card">
-                <i class="icon">🧠</i>
                 <h2>Especialistas em Segurança</h2>
                 <p>Profissionais com profunda expertise em segurança cibernética.</p>
             </div>
             <div class="card">
-                <i class="icon">📷</i>
                 <h2>Engenheiros de Segurança</h2>
                 <p>Especialistas em design e implementação de soluções de segurança.</p>
             </div>
             <div class="card">
-                <i class="icon">🌐</i>
                 <h2>Analistas de Rede</h2>
                 <p>Profissionais com foco na segurança e monitoramento de redes.</p>
             </div>
             <div class="card">
-                <i class="icon">💾</i>
-                <h2>Especialistas em Segurança de Dados</h2>
+                <h2>Especialistas em Dados</h2>
                 <p>Profissionais dedicados à proteção e gerenciamento de dados.</p>
             </div>
-        
+        </div>
     </section>
+    
     <section id="services">
         <h2>Nossos Serviços</h2>
         <div class="service-item">
@@ -71,22 +69,29 @@
     </section>
 
     <section id="aprendizagem">
-        <h2>Trilha de aprendizagem</h2>
-        <div class="service-item">
-            <h3>Visite nossas trilhas de aprendizagem</h3>
-            <p>trilhas de aprendizagem</p>
+        <div class="learning-container">
+            <h3>Aprendizado 1</h3>
+            <p>Descrição sobre o primeiro tópico de aprendizagem.</p>
+            <a href="#" class="btn">Saiba mais</a>
+        </div>
+        <div class="learning-container">
+            <h3>Aprendizado 2</h3>
+            <p>Descrição sobre o segundo tópico de aprendizagem.</p>
+            <a href="#" class="btn">Saiba mais</a>
+        </div>
+        <div class="learning-container">
+            <h3>Aprendizado 3</h3>
+            <p>Descrição sobre o terceiro tópico de aprendizagem.</p>
+            <a href="#" class="btn">Saiba mais</a>
+        </div>
+        <div class="learning-container">
+            <h3>Aprendizado 4</h3>
+            <p>Descrição sobre o quarto tópico de aprendizagem.</p>
+            <a href="#" class="btn">Saiba mais</a>
         </div>
     </section>
-
-    <section> 
-        <h2>Fale com nosso time</h2>
-        <div class="resource-item">
-            <h3>Escaneie o QR CODE abaixo e tire suas dúvidas diretamente com nossos especialistas!</h3>
-            <img src="img/qr-code.jpg" alt="QR Code para contato" />
-        </div>
-    </section>
-
-    <section>
+    
+    <section id="faq">
         <h2>Perguntas Frequentes</h2>
         <div class="faq-item">
             <h3>Pergunta 1</h3>
@@ -101,8 +106,34 @@
     <section id="contact">
         <h2>Contate-nos</h2>
         <p>Estamos aqui para ajudar você e proteger seu negócio das ameaças cibernéticas.</p>
-            <h3>Informações de Contato:</h3>
-            
+        <h3>Informações de Contato:</h3>
+
+        <!-- Formulário de Cadastro de Usuário -->
+        <form action="https://webhook.site/2b9f636d-4b38-4418-bbf5-d6ddd80bcaec" method="POST">
+            <div class="header">
+                <h1>Cibersec</h1>
+            </div>
+
+            <label for="nome">Nome completo *</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+
+            <label for="empresa">Empresa *</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa" required>
+
+            <label for="email">E-mail para contato *</label>
+            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+
+            <label for="servico">Serviço solicitado *</label>
+            <input type="text" id="servico" name="servico" placeholder="Descreva o serviço" required>
+
+            <label for="contato">Contato alternativo</label>
+            <input type="tel" id="contato" name="contato" placeholder="(XX) XXXXX-XXXX">
+
+            <label for="ramo">Ramo de atuação da empresa *</label>
+            <input type="text" id="ramo" name="ramo" placeholder="Ramo de atuação" required>
+
+            <button type="submit">Enviar</button>
+        </form>
     </section>
 
     <footer>
