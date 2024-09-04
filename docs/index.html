@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cibersec - Página Inicial</title>
+    <meta name="description" content="Cibersec oferece serviços de segurança cibernética, consultoria e treinamento para proteger seu negócio contra ameaças digitais.">
+    <meta name="keywords" content="cibersegurança, segurança digital, consultoria em TI, treinamento em segurança, monitoramento de segurança">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -11,11 +13,10 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about-us">Sobre Nós</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#aprendizagem">Aprendizagem</a></li>
-                <li><a href="#faq">Perguntas Frequentes</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="aprendizagem.html">Aprendizagem</a></li>
+                <li><a href="contact.html">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -28,81 +29,60 @@
         <img src="css/img/logo1.png" alt="Logo da empresa Cibersec" class="logo">
     </section>
 
-    <section id="about-us">
-        <h2>Equipe Especializada</h2>
-        <p>Contamos com uma equipe de especialistas qualificados e experientes em segurança cibernética.</p><br>
-        
-        <div class="container">
-            <div class="card">
-                <h2>Especialistas em Segurança</h2>
-                <p>Profissionais com profunda expertise em segurança cibernética.</p>
-            </div>
-            <div class="card">
-                <h2>Engenheiros de Segurança</h2>
-                <p>Especialistas em design e implementação de soluções de segurança.</p>
-            </div>
-            <div class="card">
-                <h2>Analistas de Rede</h2>
-                <p>Profissionais com foco na segurança e monitoramento de redes.</p>
-            </div>
-            <div class="card">
-                <h2>Especialistas em Dados</h2>
-                <p>Profissionais dedicados à proteção e gerenciamento de dados.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="services">
-        <h2>Nossos Serviços</h2>
-        <div class="service-item">
-            <h3>Consultoria em Segurança Cibernética</h3>
-            <p>Consultoria especializada para identificar e mitigar vulnerabilidades em sua infraestrutura de TI.</p>
-        </div>
-        <div class="service-item">
-            <h3>Monitoramento de Segurança</h3>
-            <p>Monitoramento contínuo para detectar e responder rapidamente a ameaças e ataques em tempo real.</p>
-        </div>
-        <div class="service-item">
-            <h3>Treinamento em Segurança</h3>
-            <p>Treinamentos personalizados sobre melhores práticas de segurança e conscientização sobre ameaças.</p>
-        </div>
-    </section>
-
-    <section id="aprendizagem">
-        <div class="learning-container">
-            <h3>Aprendizado 1</h3>
-            <p>Descrição sobre o primeiro tópico de aprendizagem.</p>
-            <a href="#" class="btn">Saiba mais</a>
-        </div>
-        <div class="learning-container">
-            <h3>Aprendizado 2</h3>
-            <p>Descrição sobre o segundo tópico de aprendizagem.</p>
-            <a href="#" class="btn">Saiba mais</a>
-        </div>
-        <div class="learning-container">
-            <h3>Aprendizado 3</h3>
-            <p>Descrição sobre o terceiro tópico de aprendizagem.</p>
-            <a href="#" class="btn">Saiba mais</a>
-        </div>
-        <div class="learning-container">
-            <h3>Aprendizado 4</h3>
-            <p>Descrição sobre o quarto tópico de aprendizagem.</p>
-            <a href="#" class="btn">Saiba mais</a>
-        </div>
-    </section>
-    
     <section id="faq">
         <h2>Perguntas Frequentes</h2>
-        <div class="faq-item">
-            <h3>Pergunta 1</h3>
-            <p>Resposta para a Pergunta 1.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Pergunta 2</h3>
-            <p>Resposta para a Pergunta 2.</p>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>O que é um firewall e por que é importante?</h3>
+                <div class="faq-answer">
+                    <p>Um firewall é uma barreira de segurança que monitora e controla o tráfego de rede, essencial para proteger contra acessos não autorizados.</p>
+                </div>
+                <button class="toggle-btn">▼</button>
+            </div>
+            <div class="faq-item">
+                <h3>Como as empresas podem proteger dados confidenciais?</h3>
+                <div class="faq-answer">
+                    <p>Implementando criptografia, acesso restrito e políticas de segurança rigorosas.</p>
+                </div>
+                <button class="toggle-btn">▼</button>
+            </div>
+            <div class="faq-item">
+                <h3>Qual é a importância de backups regulares?</h3>
+                <div class="faq-answer">
+                    <p>Backups garantem a recuperação de dados em caso de perda ou ataque cibernético.</p>
+                </div>
+                <button class="toggle-btn">▼</button>
+            </div>
+            <div class="faq-item">
+                <h3>O que é autenticação multifator (MFA)?</h3>
+                <div class="faq-answer">
+                    <p>MFA é um método de verificação de identidade que exige várias formas de confirmação.</p>
+                </div>
+                <button class="toggle-btn">▼</button>
+            </div>
+            <div class="faq-item">
+                <h3>Quais são os sinais de um possível ataque cibernético?</h3>
+                <div class="faq-answer">
+                    <p>Sinais incluem desempenho lento, e-mails suspeitos e mudanças inesperadas nos sistemas.</p>
+                </div>
+                <button class="toggle-btn">▼</button>
+            </div>
         </div>
     </section>
-
+    
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const btn = item.querySelector('.toggle-btn');
+            const answer = item.querySelector('.faq-answer');
+    
+            btn.addEventListener('click', () => {
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                btn.classList.toggle('active');
+            });
+        });
+    </script>
+      
+    
     <section id="contact">
         <h2>Contate-nos</h2>
         <p>Estamos aqui para ajudar você e proteger seu negócio das ameaças cibernéticas.</p>

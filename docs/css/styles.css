@@ -45,7 +45,8 @@ nav ul li a {
     transition: background 0.3s, color 0.3s;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
     background: rgba(255, 255, 255, 0.2); /* Fundo semitransparente ao passar o mouse */
     color: #21ceec; /* Cor do texto ao passar o mouse */
 }
@@ -159,6 +160,7 @@ section {
 
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilo para os títulos dos cards */
@@ -200,6 +202,12 @@ section {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    transition: transform 0.3s ease; /* Adicionado para animação */
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Adiciona a escala ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilo para os subtítulos dos serviços */
@@ -217,7 +225,7 @@ section {
 
 /* Seção de aprendizagem */
 #aprendizagem {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem; /* Aumenta o padding para a seção */
     background-image: url("img/learn.jpg"); /* Imagem de fundo para a seção */
     background-size: cover; /* Ajusta a imagem para cobrir toda a área */
     background-position: center; /* Centraliza a imagem */
@@ -226,7 +234,7 @@ section {
     overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
     white-space: nowrap; /* Garante que os containers fiquem em uma linha */
     gap: 20px; /* Espaço entre os containers */
-    min-height: 300px; /* Define uma altura mínima para garantir que a imagem de fundo seja visível */
+    min-height: 400px; /* Aumenta a altura mínima */
 }
 
 /* Container para cada item de aprendizagem */
@@ -242,6 +250,13 @@ section {
     position: relative;
     overflow: hidden;
     box-sizing: border-box; /* Inclui padding e border na largura total do elemento */
+    transition: transform 0.3s ease; /* Adiciona animação */
+}
+
+/* Adiciona animação ao passar o mouse */
+.learning-container:hover {
+    transform: scale(1.05); /* Adiciona a escala ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Título do item de aprendizagem */
@@ -298,19 +313,20 @@ section {
     background-size: cover; /* Faz com que a imagem cubra toda a área */
     background-position: center; /* Centraliza a imagem */
     color: #fff; /* Cor do texto branca */
-    padding: 8rem 2rem 2rem;
+    padding: 10rem 2rem; /* Aumenta o padding superior e inferior */
     text-align: center; /* Centraliza o texto */
 }
 
 /* Estilo para o título da seção */
 #faq h2 {
-    font-size: 2.2em;
+    font-size: 2.5em; /* Aumenta o tamanho do título */
     margin-bottom: 40px;
     color: #fff;
 }
 
 /* Estilo para cada item de FAQ */
 .faq-item {
+    position: relative; /* Necessário para posicionar o botão dentro do container */
     background-color: rgba(16, 17, 90, 0.8); /* Fundo preto leve */
     border-radius: 10px;
     padding: 20px;
@@ -318,20 +334,53 @@ section {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden; /* Garante que o conteúdo não saia dos limites do container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo dentro do container */
 }
 
 /* Estilo para as perguntas */
 .faq-item h3 {
-    font-size: 1.8em;
+    font-size: 1.5em; /* Reduzido para estar no mesmo tamanho da seção de serviços */
     margin-bottom: 10px;
     color: #fff;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto e a seta */
+    justify-content: center; /* Centraliza horizontalmente o texto e a seta */
+    position: relative;
 }
 
 /* Estilo para as respostas */
-.faq-item p {
-    font-size: 1.2em;
+.faq-answer {
+    display: none; /* Resposta oculta por padrão */
+    margin-top: 10px;
+    font-size: 1em; /* Reduzido para estar no mesmo tamanho da seção de serviços */
     color: #fff;
+    text-align: left;
+    width: 100%; /* Garante que a resposta ocupe toda a largura disponível */
 }
+
+/* Estilo para o botão de interação */
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em; /* Tamanho da seta */
+    cursor: pointer;
+    position: absolute;
+    right: 0; /* Alinha a seta ao lado direito */
+    top: 50%; /* Posiciona a seta verticalmente no meio do container */
+    transform: translateY(-50%); /* Ajusta a posição vertical para o centro */
+    transition: transform 0.3s;
+}
+
+/* Estilo para o botão ativo */
+.toggle-btn.active {
+    transform: rotate(180deg) translateY(-50%); /* Rotaciona a seta quando ativo e mantém a posição */
+}
+
+
 
 /* Seção de contato */
 #contact {
@@ -389,6 +438,11 @@ form input {
     color: #333;
 }
 
+form input:focus {
+    border: 1px solid #007bff;
+    outline: none;
+}
+
 form button {
     background-color: #007bff;
     color: #fff;
@@ -409,4 +463,17 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .container {
+        flex-direction: column;
+    }
+    #aprendizagem {
+        overflow-x: hidden;
+    }
 }
