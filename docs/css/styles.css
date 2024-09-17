@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333; /* Cor padrão do texto */
-    background-color: #f4f4f4; /* Cor de fundo padrão */
+    background-color: #000000; /* Cor de fundo padrão */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -51,24 +51,18 @@ nav ul li a.active {
     color: #21ceec; /* Cor do texto ao passar o mouse */
 }
 
-/* Estilo para cada seção da página */
-section {
-    border-bottom: 8px solid #1362c9; /* Cor e tamanho da borda */
-    padding: 9rem 4rem;
-    background-size: cover; /* Faz com que a imagem cubra o fundo da seção */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-}
-
 /* Seções específicas */
 #home {
-    background-image: url("img/fundo1.jpeg");
-    position: relative;
-    text-align: center;
+    background-image: url("img/fundo01.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #fff;
-    padding: 5rem 2rem 2rem;
-    height: 90vh;
-    margin-top: 0rem; /* Espaço para o cabeçalho fixo */
+    padding: 8rem 2rem 2rem; /* Ajuste o padding conforme necessário */
+    min-height: 80vh; /* Garante a altura mínima */
+    text-align: center;
+    position: relative;
+    margin-top: 4rem; /* Adicione espaço suficiente para o cabeçalho fixo */
 }
 
 #home .overlay {
@@ -77,12 +71,13 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Sobreposição para melhorar a legibilidade */
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    z-index: 1;
 }
 
 /* Seja bem-vindo ao nosso site */
@@ -105,9 +100,9 @@ section {
     z-index: 1; /* Garante que a logo esteja acima da overlay */
 }
 
-/* Seção equipe especializada */
+/* Seção Sobre Nós */
 #about-us {
-    background-image: url("img/equipe.jpg");
+    background-image: url("img/aprendizagem.jpg");
     background-size: cover; /* Faz com que a imagem cubra toda a área */
     background-position: center; /* Centraliza a imagem */
     position: relative;
@@ -176,14 +171,25 @@ section {
     color: #666;
 }
 
-/* Seção nossos serviços */
+/* Garantir que html e body ocupem 100% da altura */
+html, body {
+    height: 100%;
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Seção Nossos Serviços */
 #services {
-    background-image: url("img/time.jpg");
+    background-image: url("img/servicos.jpg");
     background-size: cover; /* Faz com que a imagem cubra toda a área */
     background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
     color: #fff; /* Cor do texto branca */
     padding: 8rem 2rem 2rem;
-    text-align: center; /* Centraliza o texto */
+    min-height: 100vh; /* Garante que a seção ocupe 100% da altura da viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    text-align: center;
 }
 
 /* Estilo para o título da seção */
@@ -223,93 +229,9 @@ section {
     color: #fff;
 }
 
-/* Seção de aprendizagem */
-#aprendizagem {
-    padding: 6rem 2rem; /* Aumenta o padding para a seção */
-    background-image: url("img/learn.jpg"); /* Imagem de fundo para a seção */
-    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição da imagem */
-    display: flex;
-    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
-    white-space: nowrap; /* Garante que os containers fiquem em uma linha */
-    gap: 20px; /* Espaço entre os containers */
-    min-height: 400px; /* Aumenta a altura mínima */
-}
-
-/* Container para cada item de aprendizagem */
-.learning-container {
-    background-image: url("img/equipe.jpg"); /* Imagem de fundo para cada container */
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    padding: 20px;
-    color: #fff;
-    width: 300px; /* Largura fixa para garantir que todos os containers tenham a mesma largura */
-    display: inline-block; /* Faz com que os containers fiquem lado a lado */
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box; /* Inclui padding e border na largura total do elemento */
-    transition: transform 0.3s ease; /* Adiciona animação */
-}
-
-/* Adiciona animação ao passar o mouse */
-.learning-container:hover {
-    transform: scale(1.05); /* Adiciona a escala ao passar o mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Título do item de aprendizagem */
-.learning-container h3 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-/* Descrição do item de aprendizagem */
-.learning-container p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-/* Botão "Saiba mais" */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #007bff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-/* Adicionar sobreposição preta para melhorar a legibilidade */
-.learning-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Sobreposição preta leve */
-    z-index: 1;
-}
-
-/* Contenido dos textos dentro dos containers */
-.learning-container > * {
-    position: relative;
-    z-index: 2;
-}
-
 /* Seção perguntas frequentes */
 #faq {
-    background-image: url("img/faq.jpg");
+    background-image: url("img/perguntas.jpg");
     background-size: cover; /* Faz com que a imagem cubra toda a área */
     background-position: center; /* Centraliza a imagem */
     color: #fff; /* Cor do texto branca */
@@ -357,7 +279,7 @@ section {
     margin-top: 10px;
     font-size: 1em; /* Reduzido para estar no mesmo tamanho da seção de serviços */
     color: #fff;
-    text-align: left;
+    text-align: center;
     width: 100%; /* Garante que a resposta ocupe toda a largura disponível */
 }
 
@@ -380,17 +302,20 @@ section {
     transform: rotate(180deg) translateY(-50%); /* Rotaciona a seta quando ativo e mantém a posição */
 }
 
-
-
 /* Seção de contato */
 #contact {
-    padding: 4rem 2rem;
-    background-image: url("img/contact.jpg"); /* Imagem de fundo para a seção */
+    padding: 3rem 2rem;
+    background-image: url("img/hhh.jpg"); /* Imagem de fundo para a seção */
     background-size: cover; /* Ajusta a imagem para cobrir toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita repetição da imagem */
     color: #fff;
-    min-height: 400px;
+    height: 100vh; /* Ajusta a altura para cobrir toda a viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Garante que o padding não afete a altura total */
 }
 
 /* Estilo para o título da seção */
@@ -398,6 +323,7 @@ section {
     font-size: 2.2em;
     margin-bottom: 20px;
     color: #fff;
+    text-align: center;
 }
 
 /* Estilo para o texto da seção de contato */
@@ -405,17 +331,22 @@ section {
     font-size: 1.2em;
     margin-bottom: 20px;
     color: #fff;
+    text-align: center;
 }
 
 /* Estilo para o formulário */
 form {
-    background: rgba(0, 0, 0, 0.6); /* Fundo preto leve para o formulário */
+    background: rgba(0, 0, 0, 0.7); /* Fundo preto mais opaco para o formulário */
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
+    width: 100%; /* Ajusta o formulário para ocupar toda a largura disponível */
     margin: 0 auto; /* Centraliza o formulário */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao formulário */
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
 }
 
+/* Estilo para rótulos do formulário */
 form label {
     display: block;
     margin-bottom: 8px;
@@ -423,6 +354,7 @@ form label {
     color: #fff;
 }
 
+/* Estilo para inputs e botão do formulário */
 form input, form button {
     display: block;
     width: 100%;
@@ -433,30 +365,72 @@ form input, form button {
     box-sizing: border-box;
 }
 
+/* Estilo para inputs */
 form input {
     background: #fff;
     color: #333;
 }
 
+/* Estilo para o foco nos inputs */
 form input:focus {
     border: 1px solid #007bff;
     outline: none;
 }
 
+/* Estilo para o botão do formulário */
 form button {
     background-color: #007bff;
     color: #fff;
     font-size: 1em;
     cursor: pointer;
+    padding: 12px;
 }
 
+/* Estilo para o hover do botão */
 form button:hover {
     background-color: #0056b3;
 }
 
+/* Seção QR Code */
+#qr-code {
+    background-image: url("img/qrcodee.jpg"); /* Imagem de fundo para a seção */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    color: #fff; /* Cor do texto branca */
+    padding: 6rem 2rem; /* Padding superior e inferior */
+    text-align: center; /* Centraliza o texto */
+    min-height: 80vh; /* Define a altura mínima da seção */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+}
+
+/* Estilo para o título da seção */
+#qr-code h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Estilo para a imagem QR Code */
+.qr-code-image {
+    max-width: 200px; /* Define a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 0 auto 20px; /* Centraliza a imagem e adiciona margem inferior */
+}
+
+/* Estilo para o texto abaixo da imagem QR Code */
+#qr-code p {
+    font-size: 1.2em;
+    color: #fff;
+    max-width: 600px; /* Define a largura máxima do parágrafo */
+    margin: 0 auto; /* Centraliza o texto */
+}
+
 /* Rodapé */
 footer {
-    background-color: #333;
+    background-color: #0c0a79;
     color: #fff;
     padding: 1rem;
     text-align: center;
