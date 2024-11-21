@@ -102,7 +102,7 @@ nav ul li a.active {
 
 /* Seção Sobre Nós */
 #about-us {
-    background-image: url("img/aprendizagem.jpg");
+    background-image: url("img/sobrenos.jpg");
     background-size: cover; /* Faz com que a imagem cubra toda a área */
     background-position: center; /* Centraliza a imagem */
     position: relative;
@@ -229,6 +229,91 @@ html, body {
     color: #fff;
 }
 
+/* Seção de aprendizagem */
+#aprendizagem {
+    padding: 6rem 2rem;
+    background-image: url("img/aprendizagem.jpg"); /* Imagem de fundo da seção */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Garante que a seção ocupe 100% da altura da tela */
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    gap: 20px; /* Espaço entre os containers */
+}
+
+/* Container para cada item de aprendizagem */
+.learning-container {
+    background-image: url("img/aprendizagem.jpg"); /* Imagem de fundo do container */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    width: 300px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+/* Adiciona animação ao passar o mouse */
+.learning-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Título do item de aprendizagem */
+.learning-container h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Descrição do item de aprendizagem */
+.learning-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Botão "Saiba mais" */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Adicionar sobreposição preta para melhorar a legibilidade */
+.learning-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Conteúdo dos textos dentro dos containers */
+.learning-container > * {
+    position: relative;
+    z-index: 2;
+}
+
+
 /* Seção perguntas frequentes */
 #faq {
     background-image: url("img/perguntas.jpg");
@@ -279,7 +364,7 @@ html, body {
     margin-top: 10px;
     font-size: 1em; /* Reduzido para estar no mesmo tamanho da seção de serviços */
     color: #fff;
-    text-align: center;
+    text-align: left;
     width: 100%; /* Garante que a resposta ocupe toda a largura disponível */
 }
 
@@ -391,9 +476,9 @@ form button:hover {
     background-color: #0056b3;
 }
 
-/* Seção QR Code */
-#qr-code {
-    background-image: url("img/qrcodee.jpg"); /* Imagem de fundo para a seção */
+/* Seção Cursos */
+#cursos {
+    background-image: url("img/ciber.jpeg"); /* Imagem de fundo para a seção */
     background-size: cover; /* Ajusta a imagem para cobrir toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita repetição da imagem */
