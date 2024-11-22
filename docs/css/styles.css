@@ -29,7 +29,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center; /* Alinha verticalmente os itens */
+    align-items: center;
 }
 
 nav ul li {
@@ -59,10 +59,10 @@ nav ul li a.active {
     background-repeat: no-repeat;
     color: #fff;
     padding: 8rem 2rem 2rem; /* Ajuste o padding conforme necessário */
-    min-height: 80vh; /* Garante a altura mínima */
+    min-height: 100vh; /* Garante a altura mínima */
     text-align: center;
     position: relative;
-    margin-top: 4rem; /* Adicione espaço suficiente para o cabeçalho fixo */
+    margin-top: 0rem; /* Adicione espaço suficiente para o cabeçalho fixo */
 }
 
 #home .overlay {
@@ -100,9 +100,73 @@ nav ul li a.active {
     z-index: 1; /* Garante que a logo esteja acima da overlay */
 }
 
+/* Conheça nossos cursos */
+
+#cursos {
+    /* Estilo para o título da seção */
+    h2 {
+        font-size: 2.5em; /* Tamanho destacado */
+        margin: 20px 0 20px; /* Reduz a margem superior para subir o título */
+        text-align: center; /* Centraliza o título */
+        color: #fff;
+    }
+    
+    /* Estilo para o parágrafo da seção */
+    p {
+        font-size: 1.3em; /* Texto levemente maior para legibilidade */
+        margin: 0 0 40px; /* Aumenta a distância do texto até os cards */
+        text-align: center; /* Centraliza o texto */
+        color: #fff; /* Texto permanece branco */
+    }
+    
+    /* Estilo para o container de cards */
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px; /* Aumenta o espaço entre os cards */
+    }
+    
+    /* Estilo para cada card */
+    .card {
+        background-color: rgb(38, 185, 190);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        width: 250px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        margin-bottom: 20px; /* Garante espaço entre o card e o próximo elemento */
+    }
+    
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Estilo para os títulos dos cards */
+    .card h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px; /* Espaço maior abaixo do título */
+        color: #fff;
+    }
+    
+    /* Estilo para os textos dos cards */
+    .card p {
+        font-size: 1em;
+        color: #fff;
+    }
+    
+    /* Garantir que html e body ocupem 100% da altura */
+    html, body {
+        height: 100%;
+        margin: 0; /* Remove margens padrão */
+    }
+}
+
 /* Seção Sobre Nós */
 #about-us {
-    background-image: url("img/sobrenos.jpg");
+    background-image: url("img/Cybersecurity-Data-Protection.jpg");
     background-size: cover; /* Faz com que a imagem cubra toda a área */
     background-position: center; /* Centraliza a imagem */
     position: relative;
@@ -177,6 +241,19 @@ html, body {
     margin: 0; /* Remove margens padrão */
 }
 
+/* Resetando margens e padding padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilo para o texto dentro do rodapé */
+footer p {
+    font-size: 1em;
+    margin: 0; /* Remove margens padrão */
+}
+
+
 /* Seção Nossos Serviços */
 #services {
     background-image: url("img/servicos.jpg");
@@ -184,7 +261,7 @@ html, body {
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
     color: #fff; /* Cor do texto branca */
-    padding: 8rem 2rem 2rem;
+    padding: 8rem 2rem 2rem; /* Espaçamento */
     min-height: 100vh; /* Garante que a seção ocupe 100% da altura da viewport */
     display: flex;
     flex-direction: column;
@@ -201,16 +278,18 @@ html, body {
 
 /* Estilo para os itens de serviço */
 .service-item {
-    background-color: rgba(16, 17, 90, 1.0); /* Fundo preto leve */
+    background-color: rgba(16, 17, 90, 0.8); /* Fundo preto leve */
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    transition: transform 0.3s ease; /* Adicionado para animação */
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo de hover nos itens de serviço */
 .service-item:hover {
     transform: scale(1.05); /* Adiciona a escala ao passar o mouse */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -223,10 +302,73 @@ html, body {
     color: #fff;
 }
 
-/* Estilo para as descrições dos serviços */
+/* Estilo para o parágrafo dos itens de serviço */
 .service-item p {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    line-height: 1.6;
     color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Layout responsivo para telas menores */
+@media (max-width: 768px) {
+    #services h2 {
+        font-size: 1.8em; /* Ajusta o tamanho da fonte para telas menores */
+        margin-bottom: 30px;
+    }
+
+    .service-item {
+        max-width: 90%; /* Altera a largura máxima para maior aproveitamento do espaço */
+        margin-bottom: 15px; /* Ajusta a distância entre os itens */
+        padding: 15px; /* Reduz o padding */
+    }
+
+    .service-item h3 {
+        font-size: 1.6em; /* Ajusta o tamanho do subtítulo */
+    }
+
+    .service-item p {
+        font-size: 1em; /* Ajusta o tamanho da fonte do parágrafo */
+    }
+}
+
+/* Layout ainda mais responsivo para telas pequenas (exemplo: smartphones) */
+@media (max-width: 480px) {
+    #services h2 {
+        font-size: 1.5em; /* Reduz o tamanho do título */
+        margin-bottom: 20px;
+    }
+
+    .service-item {
+        max-width: 100%; /* Ocupará toda a largura disponível */
+        padding: 10px; /* Ajusta o padding */
+    }
+
+    .service-item h3 {
+        font-size: 1.4em; /* Ajuste do tamanho do subtítulo */
+    }
+
+    .service-item p {
+        font-size: 0.95em; /* Ajuste do tamanho do parágrafo */
+    }
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #10115a; /* Cor de fundo, que combina com o tema */
+    color: #fff; /* Cor do texto em branco */
+    text-align: center; /* Centraliza o texto */
+    padding: 1rem 0; /* Espaçamento interno */
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Ocupa toda a largura da página */
+    margin-top: auto; /* Garante que o rodapé vai para o fundo da página */
+}
+
+/* Estilo para o texto dentro do rodapé */
+footer p {
+    font-size: 1em;
+    margin: 0; /* Remove margens padrão */
+}
 }
 
 /* Seção de aprendizagem */

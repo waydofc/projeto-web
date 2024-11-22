@@ -1,4 +1,4 @@
-# Cibersegurança e Seus Conceitos
+# Cibersec - Cibersegurança e Seus Conceitos
 
 Este é um projeto acadêmico desenvolvido como parte de um trabalho na disciplina de Desenvolvimento Web. O site é voltado para o tema cibersegurança, com o objetivo de oferecer serviços e distribuir conhecimento sobre proteção contra ameaças digitais.
 
@@ -14,18 +14,42 @@ Este é um projeto acadêmico desenvolvido como parte de um trabalho na discipli
 Este projeto acadêmico tem como foco criar um site dedicado à cibersegurança, apresentando informações sobre serviços de consultoria, treinamento e monitoramento em segurança digital. O objetivo é fornecer um recurso informativo e útil para empresas e indivíduos interessados em proteger seus ativos digitais.
 
 ## Tecnologias Utilizadas
-- **HTML5**: Linguagem de marcação utilizada para estruturar a página.
-- **CSS3**: Linguagem de estilização utilizada para o design e layout do site.
+- **HTML5**: Linguagem de marcação utilizada para estruturar as páginas.
+- **CSS3**: Linguagem de estilização utilizada para o design, layout e interatividade do site.
 
 ## Estrutura do Projeto
-- `index.html`: Página principal do projeto que inclui a estrutura básica e o conteúdo das seções do site.
-- `style.css`: Arquivo de estilos CSS que define o design e as animações do site.
+O projeto é composto pelos seguintes arquivos:
 
-### Funcionalidades
-- **Página Inicial (Home):** Apresenta a empresa e informações sobre cibersegurança, e consulta com a equipe.
-- **Sobre Nós:** Detalha a equipe e suas qualificações em cibersegurança.
-- **Serviços:** Descreve os serviços oferecidos, como consultoria e treinamento em segurança digital.
-- **Contato:** Formulário para cadastro de interesse em serviços de cibersegurança.
+- `index.html`: Página principal do site, contendo a apresentação da empresa, cursos disponíveis e perguntas frequentes.
+- `servicos.html`: Página que detalha os serviços oferecidos pela Cibersec, como consultoria, monitoramento e treinamento em segurança cibernética.
+- `style.css`: Arquivo de estilos responsável pela personalização visual e animações do site.
+- Pasta `img/`: Contém as imagens de fundo e ilustrações utilizadas no site.
+
+### Estrutura das Páginas
+1. **Página Inicial (Home):**
+   - Apresenta a empresa, informações básicas sobre cibersegurança e uma introdução ao tema.
+   - Imagem de fundo com sobreposição para destaque do conteúdo.
+
+2. **Sobre Nós:**
+   - Traz informações detalhadas sobre a equipe e os objetivos da empresa.
+
+3. **Serviços:**
+   - Lista os principais serviços oferecidos pela Cibersec, como consultoria, monitoramento e treinamentos em segurança digital.
+
+4. **Aprendizagem:**
+   - Apresenta recursos para aprimoramento em cibersegurança, incluindo materiais e cursos.
+
+5. **FAQ (Perguntas Frequentes):**
+   - Seção com as dúvidas mais comuns sobre os serviços e cibersegurança em geral.
+
+6. **Contato:**
+   - Formulário interativo para que os visitantes entrem em contato e demonstrem interesse nos serviços.
+
+## Funcionalidades
+- Layout responsivo que se adapta a diferentes tamanhos de tela.
+- Animações e efeitos visuais nos elementos ao interagir com o mouse.
+- Imagens de fundo temáticas para reforçar o visual do site.
+- Navegação intuitiva entre as diferentes páginas e seções.
 
 ## Instruções de Uso
 1. **Clone o Repositório:**
@@ -34,9 +58,13 @@ Este projeto acadêmico tem como foco criar um site dedicado à cibersegurança,
       ```bash
       git clone https://github.com/waydofc/projeto-web.git
       ```
-    - Navegue até a pasta do projeto.
-    - Abra o arquivo `index.html` em um navegador para visualizar o site.
-
+2. **Acesse a Pasta do Projeto:**
+    - Use o comando:
+      ```bash
+      cd projeto-web
+      ```
+3. **Abra no Navegador:**
+    - Localize o arquivo `index.html` e abra-o em qualquer navegador moderno para visualizar o site.
 
 ## Licença
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
