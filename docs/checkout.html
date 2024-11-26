@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="css/img/favicon2.png" type="image/png">
+    <title>Finalizar Compra</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="checkout">
+        <h2>Finalizar Compra</h2>
+        
+        <!-- Serviço Selecionado -->
+        <div class="service-details">
+            <h3>Serviço Selecionado: Consultoria em Segurança Cibernética</h3>
+            <p>Preço: R$ 499,00</p>
+            <p>Preencha o formulário abaixo, nossos especialistas irão entrar em contato para fechar a prestação de serviço.</p>
+        </div>
+        
+        <!-- Formulário de Cadastro de Usuário -->
+        <form action="https://webhook.site/2b9f636d-4b38-4418-bbf5-d6ddd80bcaec" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="empresa">Nome da Empresa:</label>
+                <input type="text" id="empresa" name="empresa" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Número de Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar Solicitação</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 Cibersec. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

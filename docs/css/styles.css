@@ -471,10 +471,14 @@ body {
     text-align: center;
 }
 
+/* Estilo para a frase 'Nossos Serviços' */
 .section-title {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: #fff;
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo preto mais suave */
+    padding: 0.5rem; /* Adiciona um pouco de espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
 }
 
 /* Container dos serviços */
@@ -485,6 +489,7 @@ body {
     justify-content: center;
     margin: 0 auto;
     max-width: 100%;
+    align-items: flex-start; /* Ajusta os itens para ficarem alinhados no topo */
 }
 
 /* Cada item de serviço */
@@ -496,7 +501,7 @@ body {
     flex: 1 1 280px;
     max-width: 300px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: center; /* Alinha o texto ao centro dentro do item */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -519,7 +524,7 @@ body {
 
 /* Botão de adquirir */
 .btn-adquirir {
-    display: block;
+    display: inline-block; /* Deixa o botão se ajustar ao conteúdo */
     background-color: #3498db;
     color: white;
     border: none;
@@ -553,60 +558,245 @@ footer p {
     margin: 0;
 }
 
-/* Seção de contato */
+/* Estilos para o Body e Layout Geral */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantir que a altura mínima ocupe toda a tela */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para o Body e Layout Geral */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantir que a altura mínima ocupe toda a tela */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para a página de Checkout */
+#checkout {
+    padding: 6rem 2rem 2rem; /* Aumenta o padding no topo */
+    background-image: url('img/cursos2.jpg'); /* Adiciona uma imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    flex: 1; /* Faz o conteúdo ocupar o restante da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #5326ce;
+    text-align: center;
+}
+
+/* Container principal do checkout */
+.checkout-container {
+    background: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente para melhorar visibilidade */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+
+/* Estilos da seção de informações do serviço */
+.service-info {
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar */
+}
+
+.service-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: #5326ce;
+}
+
+.service-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.service-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+/* Frase após o preço */
+.service-info .note {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Estilos do formulário */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Estilo do botão de envio */
+.btn-submit {
+    background-color: #3498db;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    #checkout {
+        padding: 4rem 2rem; /* Ajusta o padding */
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .checkout-container {
+        padding: 1.5rem;
+    }
+
+    .service-info {
+        padding: 1rem;
+    }
+
+    .btn-submit {
+        font-size: 1rem;
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #10115a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; /* Garantir que o rodapé fique sempre no final */
+}
+
+footer p {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Seção Contato*/
 #contact {
     padding: 3rem 2rem;
     background-image: url("img/aprendizagem.jpg");
-    background-size: cover; 
-    background-position: center; /
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
     color: #fff;
-    height: 100vh; 
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box; /* Garante que o padding não afete a altura total */
-}
-
-/* Estilo para o título da seção */
-#contact h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    width: 100%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 768px) {
+    form {
+      max-width: 90%;
+      margin: 10px auto;
+    }
+  }
+  
+  #contact {
+    padding: 6rem 2rem 3rem;
+    background-image: url("img/aprendizagem.jpg");
+    background-size: cover;
+    background-position: center;
     color: #fff;
-    text-align: center;
-}
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
 
-/* Estilo para o texto da seção de contato */
-#contact p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #fff;
-    text-align: center;
-}
-
-/* Estilo para o formulário */
-form {
-    background: rgba(0, 0, 0, 0.7); 
+  form {
+    background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
-    width: 100%; 
-    margin: 0 auto; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-    box-sizing: border-box; 
-}
-
-/* Estilo para rótulos do formulário */
-form label {
+    width: 100%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+  }
+  
+  form label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
     color: #fff;
-}
-
-/* Estilo para inputs e botão do formulário */
-form input, form button {
+  }
+  
+  form input, form button {
     display: block;
     width: 100%;
     margin-bottom: 12px;
@@ -614,43 +804,49 @@ form input, form button {
     border-radius: 5px;
     border: none;
     box-sizing: border-box;
-}
-
-/* Estilo para inputs */
-form input {
+  }
+  
+  form input {
     background: #fff;
     color: #333;
-}
-
-/* Estilo para o foco nos inputs */
-form input:focus {
+  }
+  
+  form input:focus {
     border: 1px solid #007bff;
     outline: none;
-}
-
-/* Estilo para o botão do formulário */
-form button {
+  }
+  
+  form button {
     background-color: #007bff;
     color: #fff;
     font-size: 1em;
     cursor: pointer;
     padding: 12px;
-}
-
-/* Estilo para o hover do botão */
-form button:hover {
+  }
+  
+  form button:hover {
     background-color: #0056b3;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
+  }
+  
+  /* Responsividade para dispositivos menores */
+  @media (max-width: 768px) {
+    #contact {
+      padding: 4rem 1rem 2rem;
+      justify-content: flex-start;
     }
-    .container {
-        flex-direction: column;
+  
+    form {
+      max-width: 90%;
+      margin: 10px auto;
     }
-    #aprendizagem {
-        overflow-x: hidden;
+  
+    form label {
+      font-size: 0.9em;
     }
-}
+  
+    form input, form button {
+      padding: 12px;
+      font-size: 1em;
+    }
+  }
+  
