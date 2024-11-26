@@ -566,13 +566,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Estilos para a página de Checkout */
 #checkout {
     padding: 6rem 2rem 2rem;
     background-image: url('img/cursos2.jpg');
     background-size: cover;
     background-position: center;
-    color: #333;
+    color: #fff; /* Define o texto na seção como branco */
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -583,62 +582,46 @@ body {
 .section-title {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #5326ce;
+    color: #fff; /* Deixa o título em branco */
     text-align: center;
 }
 
 .checkout-container {
-    background: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente para melhorar visibilidade */
+    background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente escuro */
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 600px;
     box-sizing: border-box;
     margin-top: 2rem;
+    color: #fff; /* Texto em branco dentro do container */
 }
 
 .service-info {
-    background-color: #f8f8f8;
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente para destacar o serviço */
     padding: 1.5rem;
     border-radius: 5px;
     margin-bottom: 2rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    color: #fff; /* Texto em branco */
 }
 
-.service-info h3 {
-    font-size: 1.8rem;
-    margin-bottom: 0.8rem;
-    color: #5326ce;
-}
-
-.service-description {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    color: #666;
-}
-
-.service-price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #3498db;
-    margin-bottom: 1rem;
+.service-info h3,
+.service-info p {
+    color: #fff; /* Torna o texto do serviço e do preço branco */
 }
 
 .service-info .note {
     font-size: 1rem;
-    color: #333;
+    color: #fff; /* Nota em branco */
     margin-top: 1rem;
     font-style: italic;
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-label {
+.form-group label {
     font-size: 1rem;
-    color: #333;
+    color: #fff; /* Cor branca para os labels */
     margin-bottom: 0.5rem;
     display: block;
 }
@@ -704,7 +687,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    margin-top: auto; 
+    margin-top: auto;
 }
 
 footer p {
