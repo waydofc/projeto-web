@@ -25,12 +25,14 @@
         <!-- Serviço Selecionado -->
         <div class="service-details">
             <h3>Serviço Selecionado: Consultoria em Segurança Cibernética</h3>
-            <p>Preço: R$ 499,00</p>
-            <p>Preencha o formulário abaixo, nossos especialistas irão entrar em contato para fechar a prestação de serviço.</p>
+            <p id="service-name">Preço: R$ 499,00</p>
+            <p id="service-description">
+                Preencha o formulário abaixo, nossos especialistas irão entrar em contato para fechar a prestação de serviço.
+            </p>
         </div>
         
         <!-- Formulário de Cadastro de Usuário -->
-        <form action="https://webhook.site/2b9f636d-4b38-4418-bbf5-d6ddd80bcaec" method="POST">
+        <form id="checkout-form">
             <div class="form-group">
                 <label for="nome">Nome Completo:</label>
                 <input type="text" id="nome" name="nome" required>
@@ -60,5 +62,6 @@
         <p>© 2024 Cibersec. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="js/scripts.js"></script>
 </body>
 </html>
