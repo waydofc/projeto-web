@@ -1,6 +1,6 @@
 /* Estilos Gerais */
 body {
-    font-family: 'nte', sans-serif; /* Alterado para Raleway */
+    font-family: 'nte', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
@@ -299,24 +299,23 @@ footer a:hover {
     position: relative;
     text-align: center;
     color: #fff;
-    padding: 6rem 2rem; /* Maior padding superior para evitar sobreposição */
-    min-height: 100vh; /* Garante que o conteúdo não ultrapasse o tamanho da página */
+    padding: 6rem 2rem;
+    min-height: 100vh;
     margin-top: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Começa o conteúdo mais no topo */
-    align-items: center; /* Centraliza horizontalmente */
+    justify-content: flex-start;
+    align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo para a logo no topo */
 .about-logo {
-    max-width: 120px; /* Tamanho menor da logo */
-    margin-bottom: 1.5rem; /* Espaço abaixo da logo */
+    max-width: 120px;
+    margin-bottom: 1.5rem;
     display: block;
 }
 
-/* Estilo do título */
 #about-us h2 {
     font-size: 2.5em;
     margin-bottom: 1rem;
@@ -324,7 +323,6 @@ footer a:hover {
     font-weight: 700;
 }
 
-/* Estilo do texto de descrição */
 #about-us p {
     font-size: 1.2em;
     margin-bottom: 2rem;
@@ -337,16 +335,14 @@ footer a:hover {
     line-height: 1.6;
 }
 
-/* Container para cards */
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 4rem; /* Espaçamento entre os cards e o próximo tópico */
+    margin-bottom: 4rem;
 }
 
-/* Estilo para cada card */
 .card {
     background-color: rgba(23, 12, 122, 0.9);
     border-radius: 10px;
@@ -370,7 +366,6 @@ footer a:hover {
     font-weight: 600;
 }
 
-/* Remove os pontos das listas */
 .card ul {
     list-style: none;
     padding: 0;
@@ -406,14 +401,12 @@ footer a:hover {
     max-width: 80%;
 }
 
-/* Definindo o layout de corpo e html */
 html, body {
     height: 100%;
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
 
-/* Reset de margens e padding */
 * {
     margin: 0;
     padding: 0;
@@ -444,7 +437,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Resets e configurações gerais */
 * {
     margin: 0;
     padding: 0;
@@ -476,9 +468,8 @@ body {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.3); /* Fundo preto mais suave */
-    padding: 0.5rem; /* Adiciona um pouco de espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
 }
 
 /* Container dos serviços */
@@ -489,7 +480,7 @@ body {
     justify-content: center;
     margin: 0 auto;
     max-width: 100%;
-    align-items: flex-start; /* Ajusta os itens para ficarem alinhados no topo */
+    align-items: flex-start;
 }
 
 /* Cada item de serviço */
@@ -501,7 +492,7 @@ body {
     flex: 1 1 280px;
     max-width: 300px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Alinha o texto ao centro dentro do item */
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -522,9 +513,8 @@ body {
     margin: 0.5rem 0;
 }
 
-/* Botão de adquirir */
 .btn-adquirir {
-    display: inline-block; /* Deixa o botão se ajustar ao conteúdo */
+    display: inline-block;
     background-color: #3498db;
     color: white;
     border: none;
@@ -562,7 +552,7 @@ footer p {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Garantir que a altura mínima ocupe toda a tela */
+    min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -571,19 +561,19 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Garantir que a altura mínima ocupe toda a tela */
+    min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
 /* Estilos para a página de Checkout */
 #checkout {
-    padding: 6rem 2rem 2rem; /* Aumenta o padding no topo */
-    background-image: url('img/cursos2.jpg'); /* Adiciona uma imagem de fundo */
+    padding: 6rem 2rem 2rem;
+    background-image: url('img/cursos2.jpg');
     background-size: cover;
     background-position: center;
     color: #333;
-    flex: 1; /* Faz o conteúdo ocupar o restante da tela */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -597,7 +587,6 @@ body {
     text-align: center;
 }
 
-/* Container principal do checkout */
 .checkout-container {
     background: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente para melhorar visibilidade */
     padding: 2rem;
@@ -609,13 +598,12 @@ body {
     margin-top: 2rem;
 }
 
-/* Estilos da seção de informações do serviço */
 .service-info {
     background-color: #f8f8f8;
     padding: 1.5rem;
     border-radius: 5px;
     margin-bottom: 2rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .service-info h3 {
@@ -637,7 +625,6 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Frase após o preço */
 .service-info .note {
     font-size: 1rem;
     color: #333;
@@ -645,7 +632,6 @@ body {
     font-style: italic;
 }
 
-/* Estilos do formulário */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -671,7 +657,6 @@ input:focus {
     border-color: #007bff;
 }
 
-/* Estilo do botão de envio */
 .btn-submit {
     background-color: #3498db;
     color: #fff;
@@ -688,10 +673,9 @@ input:focus {
     background-color: #2980b9;
 }
 
-/* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
     #checkout {
-        padding: 4rem 2rem; /* Ajusta o padding */
+        padding: 4rem 2rem;
     }
 
     .section-title {
@@ -720,7 +704,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    margin-top: auto; /* Garantir que o rodapé fique sempre no final */
+    margin-top: auto; 
 }
 
 footer p {
@@ -828,7 +812,6 @@ footer p {
     background-color: #0056b3;
   }
   
-  /* Responsividade para dispositivos menores */
   @media (max-width: 768px) {
     #contact {
       padding: 4rem 1rem 2rem;
