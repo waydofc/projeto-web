@@ -3,8 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333; /* Cor padrão do texto */
-    background-color: #000000; /* Cor de fundo padrão */
+    color: #333;
+    background-color: #000000;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -12,7 +12,7 @@ body {
 
 /* Cabeçalho */
 header {
-    background: rgba(0, 0, 0, 0.3); /* Fundo transparente para o cabeçalho */
+    background: rgba(0, 0, 0, 0.3);
     color: #fff;
     padding: 1rem;
     position: fixed;
@@ -47,8 +47,8 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    background: rgba(255, 255, 255, 0.2); /* Fundo semitransparente ao passar o mouse */
-    color: #21ceec; /* Cor do texto ao passar o mouse */
+    background: rgba(255, 255, 255, 0.2);
+    color: #21ceec;
 }
 
 /* Seções específicas */
@@ -58,11 +58,11 @@ nav ul li a.active {
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
-    padding: 8rem 2rem 2rem; /* Ajuste o padding conforme necessário */
-    min-height: 100vh; /* Garante a altura mínima */
+    padding: 8rem 2rem 2rem;
+    min-height: 100vh;
     text-align: center;
     position: relative;
-    margin-top: 0rem; /* Adicione espaço suficiente para o cabeçalho fixo */
+    margin-top: 0rem;
 }
 
 #home .overlay {
@@ -80,125 +80,249 @@ nav ul li a.active {
     z-index: 1;
 }
 
-/* Seja bem-vindo ao nosso site */
 #home h1 {
     font-size: 3rem;
     margin: 0;
 }
 
-/* Texto abaixo do seja bem-vindo */
 #home p {
     font-size: 1.5rem;
 }
 
-/* Definição da logo Cibersec */
 .logo {
     position: absolute;
     bottom: 1rem;
     left: 1rem;
     max-width: 190px;
-    z-index: 1; /* Garante que a logo esteja acima da overlay */
+    z-index: 1;
 }
-
-/* Conheça nossos cursos */
 
 #cursos {
-    /* Estilo para o título da seção */
-    h2 {
-        font-size: 2.5em; /* Tamanho destacado */
-        margin: 20px 0 20px; /* Reduz a margem superior para subir o título */
-        text-align: center; /* Centraliza o título */
-        color: #fff;
-    }
-    
-    /* Estilo para o parágrafo da seção */
-    p {
-        font-size: 1.3em; /* Texto levemente maior para legibilidade */
-        margin: 0 0 40px; /* Aumenta a distância do texto até os cards */
-        text-align: center; /* Centraliza o texto */
-        color: #fff; /* Texto permanece branco */
-    }
-    
-    /* Estilo para o container de cards */
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px; /* Aumenta o espaço entre os cards */
-    }
-    
-    /* Estilo para cada card */
+    padding: 40px 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('img/ciber.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#cursos h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #fff;
+}
+
+#cursos p {
+    font-size: 1.1rem;
+    margin: 0 0 40px;
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 2rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: rgb(38, 185, 190);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.card p {
+    font-size: 1em;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
     .card {
-        background-color: rgb(38, 185, 190);
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        padding: 20px;
-        width: 250px;
-        text-align: center;
-        transition: transform 0.3s ease;
-        margin-bottom: 20px; /* Garante espaço entre o card e o próximo elemento */
+        width: 200px;
     }
-    
-    .card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+    .container {
+        gap: 20px;
     }
-    
-    /* Estilo para os títulos dos cards */
-    .card h2 {
-        font-size: 1.5em;
-        margin-bottom: 15px; /* Espaço maior abaixo do título */
-        color: #fff;
+
+    #cursos h2 {
+        font-size: 1.8rem;
     }
-    
-    /* Estilo para os textos dos cards */
-    .card p {
-        font-size: 1em;
-        color: #fff;
-    }
-    
-    /* Garantir que html e body ocupem 100% da altura */
-    html, body {
-        height: 100%;
-        margin: 0; /* Remove margens padrão */
+
+    #cursos p {
+        font-size: 1rem;
     }
 }
 
-/* Seção Sobre Nós */
+@media (max-width: 480px) {
+    #services h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    .service-item {
+        max-width: 100%;
+        padding: 10px;
+    }
+    .service-item h3 {
+        font-size: 1.4em;
+    }
+    .service-item p {
+        font-size: 0.95em;
+    }
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#faq {
+    background-image: url("img/perguntas.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 10rem 2rem;
+    text-align: center;
+}
+
+#faq h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.faq-item {
+    position: relative;
+    background-color: rgba(16, 17, 90, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #fff;
+    text-align: left;
+    width: 100%;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+}
+
+.toggle-btn.active {
+    transform: rotate(180deg) translateY(-50%);
+}
+
+footer {
+    background-color: #10115a; /* Cor do fundo */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Alinhamento central do texto */
+    padding: 1rem 2rem; /* Espaçamento interno */
+    font-size: 0.9em; /* Tamanho da fonte */
+}
+
+footer p {
+    margin: 0.5rem 0; /* Margem para espaçamento do texto */
+}
+
+footer a {
+    color: #ff6600; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Destaque no link */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}
+
+
 #about-us {
-    background-image: url("img/Cybersecurity-Data-Protection.jpg");
-    background-size: cover; /* Faz com que a imagem cubra toda a área */
-    background-position: center; /* Centraliza a imagem */
+    background-image: url("img/servicos.jpeg");
+    background-size: cover;
+    background-position: center;
     position: relative;
     text-align: center;
     color: #fff;
     padding: 2rem;
     height: 95vh;
-    margin-top: 0rem; /* Espaço para o cabeçalho fixo */
+    margin-top: 0rem;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente */
+    justify-content: center;
 }
 
-/* Estilo para o título da seção */
 #about-us h2 {
     font-size: 2.2em;
-    margin-bottom: 10px; /* Reduzido para aproximar do parágrafo */
+    margin-bottom: 10px;
     color: #fff;
 }
 
-/* Estilo para o parágrafo da seção */
 #about-us p {
     font-size: 1.2em;
-    margin-bottom: 20px; /* Reduzido para aproximar do próximo elemento */
+    margin-bottom: 20px;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.6); /* Fundo preto leve */
-    padding: 10px; /* Espaço interno para melhorar a legibilidade */
-    border-radius: 5px; /* Arredondar os cantos */
-    display: inline-block; /* Ajusta o fundo ao tamanho do texto */
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
-/* Estilo para o container de cards */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -206,7 +330,6 @@ nav ul li a.active {
     gap: 20px;
 }
 
-/* Estilo para cada card */
 .card {
     background-color: rgba(23, 12, 122, 0.9);
     border-radius: 10px;
@@ -222,41 +345,57 @@ nav ul li a.active {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo para os títulos dos cards */
 .card h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #333;
 }
 
-/* Estilo para os textos dos cards */
 .card p {
     font-size: 1em;
     color: #666;
 }
 
-/* Garantir que html e body ocupem 100% da altura */
 html, body {
     height: 100%;
-    margin: 0; /* Remove margens padrão */
+    margin: 0;
 }
 
-/* Resetando margens e padding padrão */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* Estilo para o texto dentro do rodapé */
+
 footer p {
     font-size: 1em;
-    margin: 0; /* Remove margens padrão */
+    margin: 0;
+}
+footer {
+    background-color: #10115a; /* Cor do fundo */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Alinhamento central do texto */
+    padding: 1rem 2rem; /* Espaçamento interno */
+    font-size: 0.9em; /* Tamanho da fonte */
 }
 
+footer p {
+    margin: 0.5rem 0; /* Margem para espaçamento do texto */
+}
+
+footer a {
+    color: #ff6600; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Destaque no link */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}
 
 /* Seção Nossos Serviços */
 #services {
-    background-image: url("img/servicos.jpg");
+    background-image: url("img/sec.jpg");
     background-size: cover; /* Faz com que a imagem cubra toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
@@ -269,45 +408,67 @@ footer p {
     text-align: center;
 }
 
-/* Estilo para o título da seção */
-#services h2 {
-    font-size: 2.2em;
-    margin-bottom: 40px;
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
     color: #fff;
 }
 
-/* Estilo para os itens de serviço */
-.service-item {
-    background-color: rgba(16, 17, 90, 0.8); /* Fundo preto leve */
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: transform 0.3s ease; /* Animação ao passar o mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Container dos serviços */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
 }
 
-/* Estilo de hover nos itens de serviço */
+/* Cada item de serviço */
+.service-item {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação ao passar o mouse */
+}
+
+/* Efeito de hover nos itens de serviço */
 .service-item:hover {
     transform: scale(1.05); /* Adiciona a escala ao passar o mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para os subtítulos dos serviços */
 .service-item h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    color: #fff;
+    font-size: 1.5rem;
+    color: #5326ce; /* Cor do título dos serviços */
+    margin-bottom: 0.5rem;
 }
 
-/* Estilo para o parágrafo dos itens de serviço */
 .service-item p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #fff;
-    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #666; /* Cor mais suave para o texto */
+    margin: 0.5rem 0;
+}
+
+/* Botão de adquirir */
+.btn-adquirir {
+    display: block;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-adquirir:hover {
+    background-color: #2980b9;
 }
 
 /* Layout responsivo para telas menores */
@@ -351,6 +512,7 @@ footer p {
     .service-item p {
         font-size: 0.95em; /* Ajuste do tamanho do parágrafo */
     }
+}
 
 /* Estilo para o rodapé */
 footer {
@@ -369,175 +531,17 @@ footer p {
     font-size: 1em;
     margin: 0; /* Remove margens padrão */
 }
-}
 
-/* Seção de aprendizagem */
-#aprendizagem {
-    padding: 6rem 2rem;
-    background-image: url("img/aprendizagem.jpg"); /* Imagem de fundo da seção */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh; /* Garante que a seção ocupe 100% da altura da tela */
-    display: flex;
-    flex-direction: column; /* Alinha os itens verticalmente */
-    justify-content: center; /* Centraliza verticalmente o conteúdo */
-    gap: 20px; /* Espaço entre os containers */
-}
-
-/* Container para cada item de aprendizagem */
-.learning-container {
-    background-image: url("img/aprendizagem.jpg"); /* Imagem de fundo do container */
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    padding: 20px;
-    color: #fff;
-    width: 300px;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-    transition: transform 0.3s ease;
-}
-
-/* Adiciona animação ao passar o mouse */
-.learning-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Título do item de aprendizagem */
-.learning-container h3 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-/* Descrição do item de aprendizagem */
-.learning-container p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-/* Botão "Saiba mais" */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #007bff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-/* Adicionar sobreposição preta para melhorar a legibilidade */
-.learning-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-}
-
-/* Conteúdo dos textos dentro dos containers */
-.learning-container > * {
-    position: relative;
-    z-index: 2;
-}
-
-
-/* Seção perguntas frequentes */
-#faq {
-    background-image: url("img/perguntas.jpg");
-    background-size: cover; /* Faz com que a imagem cubra toda a área */
-    background-position: center; /* Centraliza a imagem */
-    color: #fff; /* Cor do texto branca */
-    padding: 10rem 2rem; /* Aumenta o padding superior e inferior */
-    text-align: center; /* Centraliza o texto */
-}
-
-/* Estilo para o título da seção */
-#faq h2 {
-    font-size: 2.5em; /* Aumenta o tamanho do título */
-    margin-bottom: 40px;
-    color: #fff;
-}
-
-/* Estilo para cada item de FAQ */
-.faq-item {
-    position: relative; /* Necessário para posicionar o botão dentro do container */
-    background-color: rgba(16, 17, 90, 0.8); /* Fundo preto leve */
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden; /* Garante que o conteúdo não saia dos limites do container */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza o conteúdo dentro do container */
-}
-
-/* Estilo para as perguntas */
-.faq-item h3 {
-    font-size: 1.5em; /* Reduzido para estar no mesmo tamanho da seção de serviços */
-    margin-bottom: 10px;
-    color: #fff;
-    display: flex;
-    align-items: center; /* Centraliza verticalmente o texto e a seta */
-    justify-content: center; /* Centraliza horizontalmente o texto e a seta */
-    position: relative;
-}
-
-/* Estilo para as respostas */
-.faq-answer {
-    display: none; /* Resposta oculta por padrão */
-    margin-top: 10px;
-    font-size: 1em; /* Reduzido para estar no mesmo tamanho da seção de serviços */
-    color: #fff;
-    text-align: left;
-    width: 100%; /* Garante que a resposta ocupe toda a largura disponível */
-}
-
-/* Estilo para o botão de interação */
-.toggle-btn {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5em; /* Tamanho da seta */
-    cursor: pointer;
-    position: absolute;
-    right: 0; /* Alinha a seta ao lado direito */
-    top: 50%; /* Posiciona a seta verticalmente no meio do container */
-    transform: translateY(-50%); /* Ajusta a posição vertical para o centro */
-    transition: transform 0.3s;
-}
-
-/* Estilo para o botão ativo */
-.toggle-btn.active {
-    transform: rotate(180deg) translateY(-50%); /* Rotaciona a seta quando ativo e mantém a posição */
-}
 
 /* Seção de contato */
 #contact {
     padding: 3rem 2rem;
-    background-image: url("img/hhh.jpg"); /* Imagem de fundo para a seção */
-    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-image: url("img/aprendizagem.jpg");
+    background-size: cover; 
+    background-position: center; /
+    background-repeat: no-repeat; 
     color: #fff;
-    height: 100vh; /* Ajusta a altura para cobrir toda a viewport */
+    height: 100vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -563,14 +567,14 @@ footer p {
 
 /* Estilo para o formulário */
 form {
-    background: rgba(0, 0, 0, 0.7); /* Fundo preto mais opaco para o formulário */
+    background: rgba(0, 0, 0, 0.7); 
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
-    width: 100%; /* Ajusta o formulário para ocupar toda a largura disponível */
-    margin: 0 auto; /* Centraliza o formulário */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao formulário */
-    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+    width: 100%; 
+    margin: 0 auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    box-sizing: border-box; 
 }
 
 /* Estilo para rótulos do formulário */
@@ -616,54 +620,6 @@ form button {
 /* Estilo para o hover do botão */
 form button:hover {
     background-color: #0056b3;
-}
-
-/* Seção Cursos */
-#cursos {
-    background-image: url("img/ciber.jpeg"); /* Imagem de fundo para a seção */
-    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição da imagem */
-    color: #fff; /* Cor do texto branca */
-    padding: 6rem 2rem; /* Padding superior e inferior */
-    text-align: center; /* Centraliza o texto */
-    min-height: 80vh; /* Define a altura mínima da seção */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente o conteúdo */
-}
-
-/* Estilo para o título da seção */
-#qr-code h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-/* Estilo para a imagem QR Code */
-.qr-code-image {
-    max-width: 200px; /* Define a largura máxima da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    margin: 0 auto 20px; /* Centraliza a imagem e adiciona margem inferior */
-}
-
-/* Estilo para o texto abaixo da imagem QR Code */
-#qr-code p {
-    font-size: 1.2em;
-    color: #fff;
-    max-width: 600px; /* Define a largura máxima do parágrafo */
-    margin: 0 auto; /* Centraliza o texto */
-}
-
-/* Rodapé */
-footer {
-    background-color: #0c0a79;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
 /* Responsividade */
