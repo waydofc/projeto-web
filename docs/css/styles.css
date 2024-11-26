@@ -1,6 +1,6 @@
 /* Estilos Gerais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'nte', sans-serif; /* Alterado para Raleway */
     margin: 0;
     padding: 0;
     color: #333;
@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 
 /* Cabeçalho */
 header {
@@ -50,7 +51,6 @@ nav ul li a.active {
     background: rgba(255, 255, 255, 0.2);
     color: #21ceec;
 }
-
 /* Seções específicas */
 #home {
     background-image: url("img/fundo01.jpeg");
@@ -270,28 +270,28 @@ html, body {
 }
 
 footer {
-    background-color: #10115a; /* Cor do fundo */
-    color: #fff; /* Cor do texto */
-    text-align: center; /* Alinhamento central do texto */
-    padding: 1rem 2rem; /* Espaçamento interno */
-    font-size: 0.9em; /* Tamanho da fonte */
+    background-color: #10115a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.9em;
 }
 
 footer p {
-    margin: 0.5rem 0; /* Margem para espaçamento do texto */
+    margin: 0.5rem 0;
 }
 
 footer a {
-    color: #ff6600; /* Cor do link */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    font-weight: bold; /* Destaque no link */
+    color: #ff6600;
+    text-decoration: none; 
+    font-weight: bold; 
 }
 
 footer a:hover {
-    text-decoration: underline; /* Adiciona sublinhado no hover */
+    text-decoration: underline;
 }
 
-
+/* Estilo para a seção Sobre Nós */
 #about-us {
     background-image: url("img/servicos.jpeg");
     background-size: cover;
@@ -299,112 +299,175 @@ footer a:hover {
     position: relative;
     text-align: center;
     color: #fff;
-    padding: 2rem;
-    height: 95vh;
-    margin-top: 0rem;
+    padding: 6rem 2rem; /* Maior padding superior para evitar sobreposição */
+    min-height: 100vh; /* Garante que o conteúdo não ultrapasse o tamanho da página */
+    margin-top: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Começa o conteúdo mais no topo */
+    align-items: center; /* Centraliza horizontalmente */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Estilo para a logo no topo */
+.about-logo {
+    max-width: 120px; /* Tamanho menor da logo */
+    margin-bottom: 1.5rem; /* Espaço abaixo da logo */
+    display: block;
+}
+
+/* Estilo do título */
 #about-us h2 {
-    font-size: 2.2em;
-    margin-bottom: 10px;
+    font-size: 2.5em;
+    margin-bottom: 1rem;
     color: #fff;
+    font-weight: 700;
 }
 
+/* Estilo do texto de descrição */
 #about-us p {
     font-size: 1.2em;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 8px;
     display: inline-block;
+    max-width: 80%;
+    line-height: 1.6;
 }
 
+/* Container para cards */
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    margin-bottom: 4rem; /* Espaçamento entre os cards e o próximo tópico */
 }
 
+/* Estilo para cada card */
 .card {
     background-color: rgba(23, 12, 122, 0.9);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 25px;
     width: 250px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
-.card h2 {
+.card h3 {
     font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 600;
 }
 
-.card p {
+/* Remove os pontos das listas */
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
     font-size: 1em;
-    color: #666;
+    color: #f4f4f4;
+    line-height: 1.5;
 }
 
+/* Estilo para a seção Nosso Compromisso */
+.commitment-section {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.commitment-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.commitment-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    max-width: 80%;
+}
+
+/* Definindo o layout de corpo e html */
 html, body {
     height: 100%;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
+/* Reset de margens e padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-footer p {
-    font-size: 1em;
-    margin: 0;
-}
+/* Estilo do footer */
 footer {
-    background-color: #10115a; /* Cor do fundo */
-    color: #fff; /* Cor do texto */
-    text-align: center; /* Alinhamento central do texto */
-    padding: 1rem 2rem; /* Espaçamento interno */
-    font-size: 0.9em; /* Tamanho da fonte */
+    background-color: #10115a;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1em;
+    margin-top: 3rem;
 }
 
 footer p {
-    margin: 0.5rem 0; /* Margem para espaçamento do texto */
+    margin: 0.5rem 0;
 }
 
 footer a {
-    color: #ff6600; /* Cor do link */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    font-weight: bold; /* Destaque no link */
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 footer a:hover {
-    text-decoration: underline; /* Adiciona sublinhado no hover */
+    text-decoration: underline;
 }
 
-/* Seção Nossos Serviços */
+/* Resets e configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilos da seção Nossos Serviços */
 #services {
     background-image: url("img/sec.jpg");
-    background-size: cover; /* Faz com que a imagem cubra toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
-    color: #fff; /* Cor do texto branca */
-    padding: 8rem 2rem 2rem; /* Espaçamento */
-    min-height: 100vh; /* Garante que a seção ocupe 100% da altura da viewport */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 8rem 2rem 2rem;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center;
     text-align: center;
 }
 
@@ -420,6 +483,8 @@ footer a:hover {
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 /* Cada item de serviço */
@@ -428,27 +493,27 @@ footer a:hover {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
-    width: 280px;
+    flex: 1 1 280px;
+    max-width: 300px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação ao passar o mouse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efeito de hover nos itens de serviço */
 .service-item:hover {
-    transform: scale(1.05); /* Adiciona a escala ao passar o mouse */
+    transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .service-item h3 {
     font-size: 1.5rem;
-    color: #5326ce; /* Cor do título dos serviços */
+    color: #5326ce;
     margin-bottom: 0.5rem;
 }
 
 .service-item p {
     font-size: 0.9rem;
-    color: #666; /* Cor mais suave para o texto */
+    color: #666;
     margin: 0.5rem 0;
 }
 
@@ -471,67 +536,22 @@ footer a:hover {
     background-color: #2980b9;
 }
 
-/* Layout responsivo para telas menores */
-@media (max-width: 768px) {
-    #services h2 {
-        font-size: 1.8em; /* Ajusta o tamanho da fonte para telas menores */
-        margin-bottom: 30px;
-    }
-
-    .service-item {
-        max-width: 90%; /* Altera a largura máxima para maior aproveitamento do espaço */
-        margin-bottom: 15px; /* Ajusta a distância entre os itens */
-        padding: 15px; /* Reduz o padding */
-    }
-
-    .service-item h3 {
-        font-size: 1.6em; /* Ajusta o tamanho do subtítulo */
-    }
-
-    .service-item p {
-        font-size: 1em; /* Ajusta o tamanho da fonte do parágrafo */
-    }
-}
-
-/* Layout ainda mais responsivo para telas pequenas (exemplo: smartphones) */
-@media (max-width: 480px) {
-    #services h2 {
-        font-size: 1.5em; /* Reduz o tamanho do título */
-        margin-bottom: 20px;
-    }
-
-    .service-item {
-        max-width: 100%; /* Ocupará toda a largura disponível */
-        padding: 10px; /* Ajusta o padding */
-    }
-
-    .service-item h3 {
-        font-size: 1.4em; /* Ajuste do tamanho do subtítulo */
-    }
-
-    .service-item p {
-        font-size: 0.95em; /* Ajuste do tamanho do parágrafo */
-    }
-}
-
-/* Estilo para o rodapé */
+/* Rodapé */
 footer {
-    background-color: #10115a; /* Cor de fundo, que combina com o tema */
-    color: #fff; /* Cor do texto em branco */
-    text-align: center; /* Centraliza o texto */
-    padding: 1rem 0; /* Espaçamento interno */
+    background-color: #10115a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
     position: relative;
     bottom: 0;
-    width: 100%; /* Ocupa toda a largura da página */
-    margin-top: auto; /* Garante que o rodapé vai para o fundo da página */
+    width: 100%;
+    margin-top: auto;
 }
 
-/* Estilo para o texto dentro do rodapé */
 footer p {
     font-size: 1em;
-    margin: 0; /* Remove margens padrão */
+    margin: 0;
 }
-
 
 /* Seção de contato */
 #contact {
